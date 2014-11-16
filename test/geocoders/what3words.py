@@ -37,10 +37,6 @@ class What3WordsTestCase(GeocoderTestBase):
         """
         What3Words.reverse - '3 Words'
         """
-        # self.reverse_run(
-        # {"query": u"53.037611,11.565012"},
-        #     {"address": "piped.gains.jangle"},
-        # )
         result_reverse = self._make_request(
             self.geocoder.reverse,
             "53.037611,11.565012",
