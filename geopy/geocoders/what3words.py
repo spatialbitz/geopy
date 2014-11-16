@@ -12,7 +12,7 @@ from geopy.geocoders.base import (
 from geopy.location import Location
 from geopy.util import logger, join_filter
 from geopy import exc
-from re import compile, match
+from re import compile, match, U
 
 
 __all__ = ("What3Words", )
@@ -87,7 +87,7 @@ class What3Words(Geocoder):
         """
 
         if not (
-            compile("^\*{1,1}[a-zA-Z]+$").match(query) or compile("[a-zA-Z]+\.{1,1}[a-zA-Z]+\.{1,1}[a-zA-Z]+$").match(
+            compile("^\*{1,1}[^\W\d\_]+$", U).match(query) or compile("[^\W\d\_]+\.{1,1}[^\W\d\_]+\.{1,1}[^\W\d\_]+$", U).match(
                 query)):
             raise exc.GeocoderQueryError("Search string must be either like 'word.word.word' or '*word' ")
 
