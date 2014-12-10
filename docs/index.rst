@@ -33,6 +33,9 @@ Geocoders
 .. autoclass:: geopy.geocoders.GoogleV3
     :members: __init__, geocode, reverse, timezone
 
+.. autoclass:: geopy.geocoders.LiveAddress
+    :members: __init__, geocode
+
 .. autoclass:: geopy.geocoders.MapQuest
     :members: __init__, geocode, reverse
 
@@ -47,6 +50,12 @@ Geocoders
 
 .. autoclass:: geopy.geocoders.YahooPlaceFinder
     :members: __init__, geocode
+
+.. autoclass:: geopy.geocoders.What3Words
+    :members: __init__, geocode, reverse
+
+.. autoclass:: geopy.geocoders.Yandex
+    :members: __init__, geocode, reverse
 
 Calculating Distance
 ~~~~~~~~~~~~~~~~~~~~
